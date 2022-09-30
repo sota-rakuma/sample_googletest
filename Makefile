@@ -23,3 +23,9 @@ d-build:
 
 d-test:
 	docker-compose exec tes ./test
+
+d-test2:
+	docker-compose up -d
+	docker-compose exec tes g++ -std=c++11 main.cpp -o test -L/usr/local/lib -lgtest -lgtest_main
+	docker-compose exec tes ./test
+	
