@@ -13,12 +13,15 @@ jobs:
       - name: up
         shell: bash
         run: make d-test2
+
       # - name: up
       #   shell: bash
       #   run: make d-up
+
       # - name: build
       #   shell: bash
       #   run: make d-build
+
       # - name: run
       #   shell: bash
       #   run: make d-test
