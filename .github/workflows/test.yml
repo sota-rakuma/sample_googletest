@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  googletest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@2
+      - name: up
+        shell: bash
+        run: make d-up
+      - name: build
+        shell: bash
+        run: make d-build
+      - name: run
+        shell: bash
+        run: make d-test
